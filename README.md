@@ -26,7 +26,7 @@ cd ddosdetection
 sudo mvn clean install
 
 # Copy file .oar vào thư mục apps của ONOS
-cp target/ddosdetection-2.0.0.oar /opt/onos/apps/
+sudo cp target/ddosdetection-2.0.0.oar /opt/onos/apps/
 ```
 
 ### 3. Cài đặt App trên ONOS Controller
