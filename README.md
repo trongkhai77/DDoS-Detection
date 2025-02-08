@@ -55,15 +55,20 @@ python3 data.py
 ## Cấu trúc thư mục
 ```
 .
-├── ddosdetection/         # ONOS App source code
-├── ml_model/             # Machine learning model
-├── data_collection/      # Data collection scripts
-├── api/                 # FastAPI service
-└── docs/               # Documentation
+├── /opt/
+│   ├── ddosdetection/    # ONOS App source code
+│   │   ├── src/         # Source code của ứng dụng
+│   │   ├── target/      # Thư mục chứa file build
+│   │   └── pom.xml      # File cấu hình Maven
+│   └── onos/
+│       ├── apps/
+│       │   └── ddosdetection.oar  # ONOS app package đã build
+│       └── bin/
+│           └── topology.py   # Script tạo topology
+└── ~/Desktop/
+    ├── ddos_api.py      # FastAPI service cho ML model
+    ├── data.py          # Script thu thập dữ liệu
+    ├── knn_model.joblib # Model KNN đã train
+    └── rf_model.joblib  # Model Random Forest đã train
 ```
 
-## Đóng góp
-Mọi đóng góp vào dự án đều được hoan nghênh. Vui lòng tạo pull request hoặc báo cáo issues nếu bạn phát hiện lỗi.
-
-## Giấy phép
-[MIT License](LICENSE)
